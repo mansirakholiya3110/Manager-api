@@ -8,7 +8,6 @@ const authMiddleware = require('../middleware/auth.middleware');
 router.post('/admin/register', adminController.registerAdmin);
 router.post('/admin/login', adminController.loginAdmin);
 
-// Manager routes (with admin token validation)
 router.use(authMiddleware);
 
 router.post('/manager', userController.createManager);
